@@ -1,5 +1,11 @@
 <html>
   <body>
-    This is the message: <%= message %>
+    <%- include("navbar", { links }) %>
+    <ul>
+      <% users.forEach((user) => { %>
+        <%- include("users/user", { user }) %>
+      <% }) %>
+    </ul>
+    
   </body>
 </html>
